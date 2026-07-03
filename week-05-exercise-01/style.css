@@ -1,0 +1,181 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-dark: #111111;
+    --panel-dark: #1f1f1f;
+    --ttu-red: #cc0000;
+    --gold: #ffcc00;
+    --orange: #ff9900;
+    --text-light: #f5f5f5;
+    --muted-text: #cfcfcf;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: 32px 16px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 28px;
+    background-color: var(--panel-dark);
+    border: 3px solid var(--ttu-red);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: var(--muted-text);
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--gold);
+    border-bottom: 2px solid var(--ttu-red);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.button-section {
+    padding: 32px;
+    background-color: #252525;
+    border: 2px solid var(--ttu-red);
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+.button-section p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: var(--muted-text);
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Button Style 01: Color Fade */
+.button-01 {
+    background-color: var(--ttu-red);
+    color: #ffffff;
+    padding: 16px 32px;
+    border: 2px solid var(--ttu-red);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-01:hover {
+    background-color: #ffffff;
+    color: var(--ttu-red);
+    border-color: #ffffff;
+}
+
+/* Button Style 02: Lift and Shadow */
+.button-02 {
+    background-color: #0e6027;
+    color: #ffffff;
+    padding: 16px 32px;
+    border: 2px solid #0e6027;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.button-02:hover {
+    background-color: #138a39;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Style 03: Tactical Boost */
+.button-03 {
+    background-color: #1f2a1f;
+    color: #d9ffd9;
+    padding: 16px 32px;
+    border: 2px solid #5cff5c;
+    letter-spacing: 1px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease;
+}
+
+.button-03:hover {
+    background-color: #5cff5c;
+    color: #111111;
+    transform: scale(1.08);
+    letter-spacing: 2px;
+}
+
+/* Button Style 04: Outline Fill */
+.button-04 {
+    background-color: transparent;
+    color: var(--gold);
+    padding: 16px 32px;
+    border: 2px solid var(--gold);
+    transition: background-color 0.35s ease, color 0.35s ease, border-radius 0.35s ease;
+}
+
+.button-04:hover {
+    background-color: var(--gold);
+    color: #111111;
+    border-radius: 30px;
+}
+
+/* Button Style 05: Shadow Lift */
+.button-05 {
+    background-color: var(--orange);
+    color: #111111;
+    padding: 16px 32px;
+    border: 2px solid var(--orange);
+    box-shadow: 0 4px 0 #8c4f00;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.button-05:hover {
+    background-color: var(--gold);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 18px rgba(255, 204, 0, 0.35);
+}
+
+/* Button Style 06: Final Push */
+.button-06 {
+    background-color: #330000;
+    color: #ffffff;
+    padding: 16px 32px;
+    border: 2px solid var(--ttu-red);
+    text-transform: uppercase;
+    transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.button-06:hover {
+    background-color: var(--ttu-red);
+    border-color: var(--gold);
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 0 24px rgba(204, 0, 0, 0.9);
+}
