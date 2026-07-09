@@ -5,17 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navigation Lab - Projects</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-  <nav>
+  <nav class="nav-custom">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Gallery</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="index.html">Projects</a></li>
+      <li><a href="../gallery/">Gallery</a></li>
     </ul>
   </nav>
 
@@ -37,8 +37,7 @@
       <li><a href="project-detail.html">Sample Project Detail Page</a></li>
     </ul>
 
-    <p>Try creating a third navigation style for this page. Choose from ideas like centered navigation, justified
-      navigation, or create your own custom pattern.</p>
+    <p>This page uses a custom navigation pattern with boxed links, a gold border, and hover effects.</p>
   </main>
 
 </body>
