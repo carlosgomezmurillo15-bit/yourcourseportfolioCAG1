@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #0b0c0f;
+    --surface: #15171c;
+    --surface-hover: #1e2128;
+
+    --red: #b31217;
+    --red-dark: #70090c;
+
+    --gold: #d8b04c;
+    --gold-light: #f0cc70;
+
+    --text: #f4f4f5;
+    --text-secondary: #b5b8c0;
+    --text-muted: #7e828c;
+
+    --border: rgba(255, 255, 255, 0.1);
+
+    --transition: 0.3s ease;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(130, 10, 15, 0.2),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(216, 176, 76, 0.07),
+            transparent 30%
+        ),
+        var(--background);
+
+    padding:
+        70px 24px;
+}
+
+
+/* MAIN CONTENT AREA */
+
+main {
+    width: 100%;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 50px;
+
+    background-color:
+        rgba(21, 23, 28, 0.96);
+
+    border:
+        1px solid var(--border);
+
+    border-top:
+        4px solid var(--red);
+
+    border-radius:
+        22px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.4);
+}
+
+
+/* MAIN TITLE */
+
+h1 {
+    margin-bottom: 14px;
+
+    color: var(--text);
+
+    font-size:
+        clamp(
+            2.5rem,
+            6vw,
+            4.8rem
+        );
+
+    line-height: 1;
+
+    letter-spacing:
+        -2px;
+}
+
+
+/* ACCENT LINE UNDER TITLE */
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 80px;
+
+    height: 4px;
+
+    margin-top: 22px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--red),
+            var(--gold)
+        );
+}
+
+
+/* SECONDARY HEADINGS */
+
+h2 {
+    margin-top: 45px;
+
+    margin-bottom: 15px;
+
+    color:
+        var(--gold-light);
+
+    font-size: 1.7rem;
+}
+
+
+/* PARAGRAPHS */
+
+p {
+    max-width: 750px;
+
+    margin-bottom: 28px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 17px;
+}
+
+
+/* ASSIGNMENT LIST */
+
+ul {
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+
+    margin-top: 30px;
+}
+
+
+/* INDIVIDUAL LIST ITEMS */
+
+li {
+    margin: 0;
+}
+
+
+/* COURSE LINKS */
+
+li a {
+    min-height: 75px;
+
+    padding:
+        20px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color:
+        var(--text);
+
+    background-color:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-left:
+        4px solid var(--red);
+
+    border-radius:
+        12px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition:
+        transform var(--transition),
+        background-color var(--transition),
+        border-color var(--transition),
+        color var(--transition),
+        box-shadow var(--transition);
+}
+
+
+/* SMALL ARROW */
+
+li a::after {
+    content: "→";
+
+    position: absolute;
+
+    right: 20px;
+
+    color:
+        var(--gold);
+
+    font-size: 20px;
+
+    transition:
+        transform var(--transition);
+}
+
+
+/* LINK HOVER */
+
+li a:hover {
+    color:
+        var(--gold-light);
+
+    background-color:
+        var(--surface-hover);
+
+    border-color:
+        var(--gold);
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 28px
+        rgba(0, 0, 0, 0.3);
+}
+
+li a:hover::after {
+    transform:
+        translateX(5px);
+}
+
+
+/* SPECIAL EMPHASIS FOR PROJECT LINKS */
+
+a[href*="project-01"],
+a[href*="project-02"] {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(179, 18, 23, 0.18),
+            var(--surface)
+        );
+
+    border-left-color:
+        var(--gold);
+}
+
+
+/* GENERAL LINKS OUTSIDE THE LIST */
+
+a {
+    color:
+        var(--gold-light);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    body {
+        padding:
+            30px 16px;
+    }
+
+    main {
+        padding:
+            32px 22px;
+    }
+
+    ul {
+        grid-template-columns:
+            1fr;
+    }
+
+    h1 {
+        letter-spacing:
+            -1px;
+    }
+
+}
+
+
+/* LARGE DESKTOP */
+
+@media (min-width: 1100px) {
+
+    main {
+        padding:
+            60px;
+    }
+
+}
